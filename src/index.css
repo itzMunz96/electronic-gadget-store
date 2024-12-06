@@ -57,14 +57,18 @@
   body {
     @apply bg-background text-foreground font-inter antialiased;
   }
+}
 
+@layer components {
   /* Premium Animations */
-  .fade-in {
-    @apply opacity-0 animate-in fade-in duration-500;
+  .animate-fade-in {
+    opacity: 0;
+    animation: fade-in 500ms ease-out forwards;
   }
 
-  .slide-in {
-    @apply translate-y-4 animate-in slide-in-from-bottom duration-500;
+  .animate-slide-in {
+    transform: translateY(1rem);
+    animation: slide-in 500ms ease-out forwards;
   }
 
   .hover-lift {
@@ -74,6 +78,18 @@
   /* Glass Card */
   .glass-card {
     @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  to {
+    transform: translateY(0);
   }
 }
 
