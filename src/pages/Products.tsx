@@ -106,7 +106,7 @@ const products = [
     description: "A17 Pro chip, 256GB, Titanium finish, Pro camera system",
     price: 999,
     category: "Smartphones",
-    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
+    image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9",
   },
   {
     id: 3,
@@ -114,7 +114,7 @@ const products = [
     description: "10.9-inch display, M1 chip, 256GB, Wi-Fi + Cellular",
     price: 749,
     category: "Tablets",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
   },
   {
     id: 4,
@@ -122,7 +122,7 @@ const products = [
     description: "Digital Edition, DualSense controller, 825GB SSD",
     price: 499,
     category: "Gaming Consoles",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
   },
   {
     id: 5,
