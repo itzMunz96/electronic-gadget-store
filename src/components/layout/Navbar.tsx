@@ -19,9 +19,6 @@ export const Navbar = () => {
             <Link to="/products" className="hover:text-primary/80 transition-colors">
               Products
             </Link>
-            <Link to="/categories" className="hover:text-primary/80 transition-colors">
-              Categories
-            </Link>
           </div>
 
           {/* Search and Icons */}
@@ -59,12 +56,6 @@ export const Navbar = () => {
               className="block px-4 py-2 hover:bg-accent rounded-md transition-colors"
             >
               Products
-            </Link>
-            <Link
-              to="/categories"
-              className="block px-4 py-2 hover:bg-accent rounded-md transition-colors"
-            >
-              Categories
             </Link>
             <div className="flex items-center space-x-4 px-4 py-2">
               <Button variant="ghost" size="icon">
