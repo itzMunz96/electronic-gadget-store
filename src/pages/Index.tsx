@@ -1,8 +1,21 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleCategoryClick = (category: string) => {
+    navigate(`/products?category=${category.toLowerCase()}`);
+    toast({
+      title: "Category Selected",
+      description: `Browsing ${category} products`,
+    });
+  };
+
   return (
     <Layout>
       <section className="relative h-[80vh] flex items-center">
@@ -15,7 +28,7 @@ const Index = () => {
         </div>
         
         <div className="container relative z-10">
-          <div className="max-w-2xl space-y-6 fade-in">
+          <div className="max-w-2xl space-y-6 animate-fade-in">
             <span className="px-3 py-1 text-sm border rounded-full">New Arrivals</span>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               Experience Next-Gen Technology
@@ -38,9 +51,9 @@ const Index = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {categories.map((category) => (
-            <Link
+            <button
               key={category.name}
-              to={`/categories/${category.slug}`}
+              onClick={() => handleCategoryClick(category.name)}
               className="group relative overflow-hidden rounded-lg aspect-square hover-lift"
             >
               <img
@@ -51,7 +64,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/20 flex items-end p-6">
                 <h3 className="text-xl font-semibold text-white">{category.name}</h3>
               </div>
-            </Link>
+            </button>
           ))}
         </div>
       </section>
